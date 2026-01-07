@@ -36,17 +36,17 @@ We will dummy categorical variables and derive embeddings from discharge notes. 
 We will use a random forest as it tends to be a strong out of the box model. We will use max_depth=3 and n_estimators=10 as a simple baseline model. Given the class imbalance, we will use class weighting in training.
 ### Performance
 
-  | Train | Test |
---- | --- | --- |
-ROC AUC | 0.81 | 0.56 |
-F1 Score | 0.65 | 0.5 |
-Recall | 0.77 | 0.47 |
+|  | Train | Test |
+|--- | --- | --- |
+|ROC AUC | 0.81 | 0.56 |
+|F1 Score | 0.65 | 0.5 |
+|Recall | 0.77 | 0.47 |
 
 **Confusion Matrix**
-  | Pred 0 | Pred 1 |
---- | --- | --- |
-True 0 | 16 | 7 |
-True 1| 9 | 8 |
+|  | Pred 0 | Pred 1 |
+|--- | --- | --- |
+|True 0 | 16 | 7 |
+|True 1| 9 | 8 |
 
 Performance metrics indicate we are overfitting to the training set. We also have a tendency to underpredict the positive class (which is not entirely unexpected given the class imbalance). If we are using this model to inform scheduling of hospital staff, it may be better to overpredict rather than under predict (we'd rather over staff than under staff). In this case we may look to optimize recall. 
 
