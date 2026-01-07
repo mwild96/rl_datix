@@ -5,8 +5,8 @@
 Task: develop a model to predict whether a patient will be readmitted to hospital within 30 days
 ## Exploratory Analysis
 The target feature is imbalanced
-0: 67.5%
-1: 32.5%
+- 0: 67.5%
+- 1: 32.5%
 
 Exploratory analysis reveals several potentially predictive features
 - num previous admissions
@@ -51,7 +51,7 @@ We will use a random forest as it tends to be a strong out of the box model. We 
 Performance metrics indicate we are overfitting to the training set. We also have a tendency to underpredict the positive class (which is not entirely unexpected given the class imbalance). If we are using this model to inform scheduling of hospital staff, it may be better to overpredict rather than under predict (we'd rather over staff than under staff). In this case we may look to optimize recall. 
 
 ### Feature Importance
-<img width="1286" height="786" alt="image" src="https://github.com/user-attachments/assets/e7a64069-4913-44aa-a5b8-a61be816856e" />
+<img width="428" height="262" alt="image" src="https://github.com/user-attachments/assets/e7a64069-4913-44aa-a5b8-a61be816856e" />
 
 The embeddings derived from the discharge notes are by far the most important features. It is possible this may explain some of the overfitting we're seeing as these features are very rich.
 
