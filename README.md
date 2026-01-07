@@ -10,12 +10,15 @@ The target feature is imbalanced
 
 Exploratory analysis reveals several potentially predictive features
 - num previous admissions
+
   <img width="363" height="273" alt="image" src="https://github.com/user-attachments/assets/07152c78-13df-4511-ba20-6c88bbba46c4" />
 
 - diagnosis code
+
   <img width="385" height="273" alt="image" src="https://github.com/user-attachments/assets/0fe9d4d2-c443-4d85-b113-543cd8460f9d" />
 
 - medication type
+  
   <img width="390" height="273" alt="image" src="https://github.com/user-attachments/assets/72866a5d-0298-4742-89f8-fe59b58f4c53" />
   
 There is a fair amount of overlap in common comments in the discharge notes between the two classes. Common phrases used for both classes include:
