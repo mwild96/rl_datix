@@ -62,3 +62,15 @@ Next steps for this model would include
 2. data expansion: if possible we would also look to increase (1) the # of records in our dataset and (2) the attributes describing patient condition. Additional records could help to both reduce overfitting and improve performance. Additional attributes might give the model more signal to learn from and improve performance. Additional attributes might include information about patient condition shortly after their discharge, possibly retrieved via a short questionnaire in an online patient portial.
 
 # Named Entity Recognition
+Task: Extract and categorize key information from free-text discharge notes.
+
+## Approach
+Leverage an LLM (Llama3) to extract relevant attributes from the discharge notes. 
+
+## Results
+*See attached Excel.*
+
+## Future Work & Improvements
+Next steps for this pipeline would include 
+1. model selection: other LLMs, such as OpenAI's gpt models, may have better & more consistent output. With OpenAI the user can either specify the response_format as json or leverage Structured Outputs to define a specific json structure for the output. Either forces the LLM to deliver more consistently formatted output. 
+2. prompt engineering: to address natural language variations within the input text and the LLM's generated text, the LLM could be provided with a list of possible labels for each category - e.g., for diagnosis: pneumonia, sepsis, covid, etc. Standardized labels would allow for smoother downstream analysis. An LLM call could also be made separately for the labeling of each category as LLMs tend to perform better with simpler tasks. 
